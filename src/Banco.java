@@ -10,7 +10,7 @@ public class Banco {
 
     public void criarConta(String nomeProprietario) {
         Pessoa proprietario = new Pessoa(nomeProprietario);
-        Conta conta = new Conta(proprietario);
+        Conta conta = new Conta(proprietario, contas.size() + 1);
         contas.add(conta);
         System.out.println("Conta " + conta.getNumero() + " criada para " + nomeProprietario + ".");
     }

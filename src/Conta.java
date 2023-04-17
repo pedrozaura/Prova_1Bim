@@ -2,18 +2,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Conta {
-    private static int sequencial = 1;
     private int numero;
     private Pessoa proprietario;
     private double saldo;
     private List<String> movimentacoes;
 
-    public Conta(Pessoa proprietario) {
-        this.numero = sequencial;
+    public Conta(Pessoa proprietario, int numero) {
+        this.numero = numero;
         this.proprietario = proprietario;
         this.saldo = 0;
         this.movimentacoes = new ArrayList<>();
-        sequencial++;
     }
 
     public int getNumero() {
